@@ -1,0 +1,21 @@
+.search_wrapper {
+    position: relative;
+}
+
+.search {
+    margin-top: 10%;
+    resize: none;
+    font-size: 0.8em;
+    /*padding: 7px 10px 7px 30px;*/
+    padding: 0.7em 1.2em 0.7em 3em;
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+}
+
+.search_icon {
+    position: absolute;
+    width: 7%;
+    left: 7%;
+    top: 55%;
+}

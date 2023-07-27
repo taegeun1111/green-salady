@@ -1,0 +1,10 @@
+.cart_wrapper{
+    background: white;
+    width: 30%;
+    padding: 20px;
+}
+
+.main_title{
+    font-style: italic;
+    font-size: 1.5em;
+}
