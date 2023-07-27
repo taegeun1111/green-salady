@@ -1,0 +1,19 @@
+.category_wrapper{
+    margin-top: 1.7em;
+    padding: 0;
+    height: 1.7em;
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    font-size: 0.9em;
+    font-weight: 300;
+    /*color: white;*/
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    list-style: none;
+    /*padding: 0 0.5em;*/
+    margin: 0 0.5em;
+}

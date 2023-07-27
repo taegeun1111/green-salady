@@ -1,7 +1,9 @@
 import React from 'react';
-import classes from "./Header.module.css";
+import classes from "./Food.module.css";
 import logo from "../../assets/logo.png";
-import Search from "./Search"
+import Search from "../Foods/Search"
+import Category from "../Foods/Category";
+import FoodList from "../Foods/FoodList";
 
 const Food = () => {
   return (
@@ -9,6 +11,8 @@ const Food = () => {
         <header className={classes.header}>
           <img src={logo} alt={"logo"} className={classes.logo}/>
           <Search/>
+          <Category />
+          <FoodList />
         </header>
       </>
   );

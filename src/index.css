@@ -9,7 +9,8 @@ html {
 
 body {
   margin: 0;
-  background-color: black;
+  /*background-color: black;*/
   /*display: flex;*/
+  background: whitesmoke;
 }
 
