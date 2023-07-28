@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "../Cart/CartList.module.css";
-import salad1 from "../../assets/salad1.png";
+import salad1 from "../../assets/salad_img/salad1.png";
 import minus from "../../assets/minus.png";
 import plus from "../../assets/plus.png";
 
