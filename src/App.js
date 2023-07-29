@@ -1,9 +1,9 @@
 import Food from "./components/Layout/Food";
 import Cart from "./components/Layout/Cart"
 import classes from "./App.module.css";
-import {Reset} from "styled-reset";
 import Receipt from "./components/Receipt/Receipt";
 import {useState} from "react";
+import CartProvider from "./components/store/CartProvider";
 
 function App() {
     const [receiptIsShown, setReceiptIsShown] = useState(false);
@@ -12,16 +12,18 @@ function App() {
         setReceiptIsShown(true);
     }
 
-    const hideReceiptHandler = () =>{
+    const hideReceiptHandler = () => {
         setReceiptIsShown(false);
     }
 
     return (
-        <div className={classes.common}>
-            {receiptIsShown && <Receipt onClose={hideReceiptHandler}/>}
-            <Food/>
-            <Cart onShowCart={showReceiptHandler}/>
-        </div>
+        <CartProvider>
+            <div className={classes.common}>
+                {receiptIsShown && <Receipt onClose={hideReceiptHandler}/>}
+                <Food/>
+                <Cart onShowCart={showReceiptHandler}/>
+            </div>
+        </CartProvider>
     );
 }
 
