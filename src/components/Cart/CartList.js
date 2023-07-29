@@ -7,8 +7,8 @@ import plus from "../../assets/plus.png";
 const CartList = () => {
     return (
         <>
-            <div className={classes.cart_list_wrapper}>
-                <div className={classes.cart_list}>
+            <ul className={classes.cart_list_wrapper}>
+                <li className={classes.cart_list}>
                     <img src={salad1} alt={'food-img'} className={classes.cart_img}/>
                     <div className={classes.cart_text_wrapper}>
                         <h1 className={classes.cart_title}>데일리 샐러드</h1>
@@ -21,9 +21,9 @@ const CartList = () => {
                             </div>
                         </section>
                     </div>
-                </div>
+                </li>
 
-                <div className={classes.cart_list}>
+                <li className={classes.cart_list}>
                     <img src={salad1} alt={'food-img'} className={classes.cart_img}/>
                     <div className={classes.cart_text_wrapper}>
                         <h1 className={classes.cart_title}>데일리 샐러드</h1>
@@ -36,9 +36,9 @@ const CartList = () => {
                             </div>
                         </section>
                     </div>
-                </div>
+                </li>
 
-                <div className={classes.cart_list}>
+                <li className={classes.cart_list}>
                     <img src={salad1} alt={'food-img'} className={classes.cart_img}/>
                     <div className={classes.cart_text_wrapper}>
                         <h1 className={classes.cart_title}>데일리 샐러드</h1>
@@ -51,8 +51,8 @@ const CartList = () => {
                             </div>
                         </section>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
             <section className={classes.final_price_wrapper}>
                 <h3 className={classes.final_price_title}>Total</h3>
                 <h3 className={classes.final_price}>110,000원</h3>
