@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from './FoodList.module.css';
 import salad1 from '../../assets/salad_img/salad1.png';
 import salad2 from '../../assets/salad_img/salad2.png';
@@ -10,8 +10,9 @@ import salad7 from '../../assets/salad_img/salad7.png';
 import salad8 from '../../assets/salad_img/salad8.png';
 import salad9 from '../../assets/salad_img/salad9.png';
 import FoodListForm from "./FoodListForm";
+import CartContext from "../store/cart-context";
 
-const FoodList = () => {
+const FoodList = (props) => {
     const DUMMY_SALAD = [
         {
             id: 's1',
@@ -69,10 +70,22 @@ const FoodList = () => {
         }
     ]
 
+    const cartCtx = useContext(CartContext);
+
     const updatePrice = (price) => {
         const formatter = new Intl.NumberFormat('ko-KR');
         return formatter.format(price);
     }
+
+    const addToCartHandler = (amount) => {
+        cartCtx.addItem({
+                id: props.id,
+                name: props.name,
+                amount: amount
+        });
+
+        console.log(`id : ${props.id}, name : ${props.name}, amount : ${amount}`)
+    };
 
     return (
         <>
@@ -83,7 +96,7 @@ const FoodList = () => {
                         <h1 className={classes.food_title}>{salad.name}</h1>
                         <div>
                         <h2 className={classes.food_price}>{updatePrice(salad.price)}원</h2>
-                        <FoodListForm id={salad.id}/>
+                        <FoodListForm id={salad.id} onAddToCart={addToCartHandler}/>
                         </div>
                     </li>
                 ))}

@@ -1,11 +1,21 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import classes from './FoodListForm.module.css'
 import Input from "../UI/Input";
-const FoodListForm = ({id}) => {
-
+const FoodListForm = ({id, onAddToCart}) => {
     const amountInputRef = useRef();
-    const submitHandler = e => {
 
+    const submitHandler = e => {
+        e.preventDefault();
+        const enteredAmount = amountInputRef.current.textContent;
+        const enteredAmountNumber = +enteredAmount;
+
+        if (enteredAmount.trim().length === 0 ||
+            enteredAmountNumber <1)
+        {
+           alert("주문 수량을 확인해주세요!");
+        }
+
+        onAddToCart(enteredAmountNumber);
     }
 
     return (
