@@ -1,0 +1,35 @@
+/*Final Price Section*/
+.final_price_wrapper{
+    margin-top: 0.5em;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+}
+
+.final_price_title,
+.final_price{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+.final_price_title{
+    font-size: 1em;
+    margin-right: 0.3em;
+}
+
+.final_price{
+    font-size: 1.7em;
+    /*font-weight: 400;*/
+}
+
+.pay_btn{
+    margin-top: 0.5em;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 0.9em;
+    padding: 0.6em 0;
+    border-radius: 50em;
+    color: white;
+    background: #226632;
+}

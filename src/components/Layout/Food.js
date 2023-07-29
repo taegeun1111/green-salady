@@ -11,7 +11,7 @@ const Food = () => {
         <header className={classes.header}>
           <img src={logo} alt={"logo"} className={classes.logo}/>
           <Search/>
-          <Category />
+          {/*<Category />*/}
           <FoodList />
         </header>
       </>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Modal from "../UI/Modal";
 
-const Receipt = () => {
+const Receipt = (props) => {
     return (
-        <Modal>
+        <Modal onClose={props.onClose}>
             <div>Receipt</div>
-            <button type={'button'}>Close</button>
+            <button type={'button'} onClick={props.onClose}>Close</button>
         </Modal>
     );
 };
