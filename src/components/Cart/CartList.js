@@ -19,9 +19,9 @@ const CartList = ({img, name, amount, price, id, onAdd, onRemove}) => {
                     <section className={classes.cart_price_wrapper}>
                         <h2 className={classes.cart_price}>{updatePrice(price)}원</h2>
                         <div className={classes.cart_count}>
-                            <img src={minus} alt={'minus'} className={classes.minus_icon}/>
+                            <img src={minus} alt={'minus'} className={classes.minus_icon} onClick={onRemove}/>
                             <h3 className={classes.current_count}>{amount}</h3>
-                            <img src={plus} alt={'plus'} className={classes.plus_icon}/>
+                            <img src={plus} alt={'plus'} className={classes.plus_icon} onClick={onAdd}/>
                         </div>
                     </section>
                 </div>
