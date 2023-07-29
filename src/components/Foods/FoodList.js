@@ -68,7 +68,7 @@ const FoodList = (props) => {
             name: '치킨 샐러드',
             price: 8000
         }
-    ]
+    ];
 
     const cartCtx = useContext(CartContext);
 
@@ -81,11 +81,12 @@ const FoodList = (props) => {
         cartCtx.addItem({
             id: cart.id,
             name: cart.name,
+            img : cart.img,
             amount: cart.amount,
             price: cart.price
         });
 
-        console.log(`id : ${cart.id}, name : ${cart.name}, amount : ${cart.amount}`)
+        console.log(`id : ${cart.id}, name : ${cart.name}, amount : ${cart.amount}, img : ${cart.img}`)
     };
 
     return (
@@ -99,6 +100,7 @@ const FoodList = (props) => {
                             <h2 className={classes.food_price}>{updatePrice(salad.price)}원</h2>
                             <FoodListForm
                                 id={salad.id}
+                                img = {salad.img}
                                 name={salad.name}
                                 price = {salad.price}
                                 onAddToCart={addToCartHandler}/>

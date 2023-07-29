@@ -13,3 +13,11 @@
     margin: 0.5em 0;
 }
 
+.cart_list_wrapper{
+    max-height: 80%;
+    min-height: 80%;
+    overflow: auto;
+    border-bottom: 1px solid black;
+    padding-left: 0;
+}
+

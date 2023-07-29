@@ -32,14 +32,23 @@
     /*font-weight: 400;*/
 }
 
-.pay_btn{
+.pay_btn,
+.pay_btn_no{
     margin-top: 0.5em;
-    cursor: pointer;
     width: 100%;
     border: none;
     font-size: 0.9em;
     padding: 0.6em 0;
     border-radius: 50em;
     color: white;
+}
+
+.pay_btn{
+    cursor: pointer;
     background: #226632;
 }
+
+.pay_btn_no{
+    background: rgb(150,150,150);
+}
+
