@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import classes from './FoodListForm.module.css'
 import Input from "../UI/Input";
-const FoodListForm = ({id, onAddToCart}) => {
+const FoodListForm = ({id, onAddToCart,name,price}) => {
     const amountInputRef = useRef();
 
     const submitHandler = e => {
@@ -14,8 +14,13 @@ const FoodListForm = ({id, onAddToCart}) => {
         {
            alert("주문 수량을 확인해주세요!");
         }
-
-        onAddToCart(enteredAmountNumber);
+        const addCartResult = {
+            id : id,
+            name : name,
+            amount : enteredAmountNumber,
+            price : price
+        }
+        onAddToCart(addCartResult);
     }
 
     return (

@@ -77,14 +77,15 @@ const FoodList = (props) => {
         return formatter.format(price);
     }
 
-    const addToCartHandler = (amount) => {
+    const addToCartHandler = (cart) => {
         cartCtx.addItem({
-                id: props.id,
-                name: props.name,
-                amount: amount
+            id: cart.id,
+            name: cart.name,
+            amount: cart.amount,
+            price: cart.price
         });
 
-        console.log(`id : ${props.id}, name : ${props.name}, amount : ${amount}`)
+        console.log(`id : ${cart.id}, name : ${cart.name}, amount : ${cart.amount}`)
     };
 
     return (
@@ -95,8 +96,12 @@ const FoodList = (props) => {
                         <img src={salad.img} alt={'food-img'} className={classes.food_img}/>
                         <h1 className={classes.food_title}>{salad.name}</h1>
                         <div>
-                        <h2 className={classes.food_price}>{updatePrice(salad.price)}원</h2>
-                        <FoodListForm id={salad.id} onAddToCart={addToCartHandler}/>
+                            <h2 className={classes.food_price}>{updatePrice(salad.price)}원</h2>
+                            <FoodListForm
+                                id={salad.id}
+                                name={salad.name}
+                                price = {salad.price}
+                                onAddToCart={addToCartHandler}/>
                         </div>
                     </li>
                 ))}
