@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from "../Cart/CartList.module.css";
 import minus from "../../assets/minus.png";
 import plus from "../../assets/plus.png";
@@ -10,9 +10,11 @@ const CartList = ({img, name, amount, price, id, onAdd, onRemove}) => {
         return formatter.format(price)
     };
 
+    const btnClasses = `${classes.cart_list} ${classes.bump}`
+
     return (
         <>
-            <li className={classes.cart_list} key={id}>
+            <li className={btnClasses} key={id}>
                 <img src={img} alt={'food-img'} className={classes.cart_img}/>
                 <div className={classes.cart_text_wrapper}>
                     <h1 className={classes.cart_title}>{name}</h1>

@@ -9,8 +9,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: antiquewhite;
-    /*background: #f9efe4;*/
+    /*background: antiquewhite;*/
+    background: #faf1dc;
+    /*background: rgb(240,240,240);*/
     border-radius: 1em;
+    box-shadow: 3px 4px 9px 5px rgba(200,200,200,0.5);
     /*height: 80%;*/
 }

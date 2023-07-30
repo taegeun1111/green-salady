@@ -3,8 +3,9 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 1em;
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
     border-bottom: 1px solid rgb(200,200,200);
+    /*padding: 20px;*/
 }
 
 .cart_list:last-child{
@@ -63,5 +64,28 @@
     width: 1.5em;
     height: 1.5em;
     cursor: pointer;
+}
+
+/* animation */
+.bump {
+    animation: bump 400ms ease-out;
+}
+
+@keyframes bump {
+    0% {
+        transform: scale(1);
+    }
+    /*10% {*/
+    /*    transform: scale(0.95);*/
+    /*}*/
+    30% {
+        transform: scale(0.98);
+    }
+    50% {
+        /*transform: scale(1.05);*/
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
