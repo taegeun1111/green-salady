@@ -47,3 +47,14 @@
     margin: 0;
     /*color: white;*/
 }
+
+/* loading */
+.loading{
+    margin-top: 1em;
+}
+
+.error{
+    margin-top: 1em;
+    text-align: center;
+    color: red;
+}
