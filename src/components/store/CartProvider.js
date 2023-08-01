@@ -27,8 +27,8 @@ const cartReducer = (state, action) => {
             updatedItems = state.items.concat(action.item);
         }
         const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
-        console.log('이전 총 합 : ' ,state.totalAmount)
-        console.log('현재 총 합 : ' ,updatedTotalAmount)
+        // console.log('이전 총 합 : ' ,state.totalAmount)
+        // console.log('현재 총 합 : ' ,updatedTotalAmount)
         return {
             items: updatedItems,
             totalAmount: updatedTotalAmount
@@ -59,6 +59,10 @@ const cartReducer = (state, action) => {
         }
     }
 
+    if (action.type === 'CLEAR'){
+        return defaultCartState;
+    }
+
     return defaultCartState;
 }
 
@@ -74,11 +78,16 @@ const CartProvider = (props) => {
         dispatch({type: 'REMOVE', id: id})
     };
 
+    const clearItemFromCartHandler = () =>{
+        dispatch({type:'CLEAR'})
+    }
+
     const cartContext = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler,
-        removeItem: removeItemFromCartHandler
+        removeItem: removeItemFromCartHandler,
+        clearItem : clearItemFromCartHandler
     }
 
     return (

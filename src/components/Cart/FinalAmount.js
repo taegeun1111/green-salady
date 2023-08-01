@@ -22,9 +22,18 @@ const FinalAmount = (props) => {
 
             {hasItems
                 ?
-                <button type={"button"} className={classes.pay_btn} onClick={props.onClick}>결제하기</button>
+                <button
+                  type={"button"}
+                  className={classes.pay_btn}
+                  onClick={props.onClick}>결제하기
+                </button>
                 :
-                <button type={"button"} disabled={true} className={classes.pay_btn_no} onClick={props.onClick}>장바구니에 샐러드를 넣어주세요!</button>
+                <button
+                  type={"button"}
+                  disabled={true}
+                  className={classes.pay_btn_no}
+                  onClick={props.onClick}>장바구니에 샐러드를 넣어주세요!
+                </button>
             }
         </>
     );
