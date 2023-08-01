@@ -79,10 +79,10 @@ const FoodList = (props) => {
           console.log('Error getting image URL:', error);
         }
         imgNum++;
-        console.log(`imgNum : ${imgNum}`)
+        // console.log(`imgNum : ${imgNum}`)
       }
 
-      console.log(loadedSalad)
+      // console.log(loadedSalad)
       setSalad(loadedSalad)
       setIsLoading(false);
     };

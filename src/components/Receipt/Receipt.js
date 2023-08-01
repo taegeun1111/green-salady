@@ -5,8 +5,13 @@ import CartContext from "../store/cart-context";
 const Receipt = (props) => {
 
   const cartCtx = useContext(CartContext);
+
+  const clearHandler =()=>{
+    cartCtx.clearCart()
+    props.onClose();
+  }
   useEffect(() => {
-    console.log(cartCtx.items)
+    // cartCtx.clearCart()
   }, [])
   return (
     <Modal onClose={props.onClose}>
@@ -29,7 +34,7 @@ const Receipt = (props) => {
         <h2>{cartCtx.totalAmount}원</h2>
       </div>
       <div>
-        <button type={'button'} onClick={props.onClose}>Close</button>
+        <button type={'button'} onClick={clearHandler}>Close</button>
       </div>
     </Modal>
   );
