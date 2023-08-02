@@ -31,7 +31,7 @@ import {BarLoader, ClipLoader, RingLoader} from "react-spinners";
 
      */
 
-const FoodList = (props) => {
+const FoodList = ({inputValue}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState(null);
 
@@ -48,6 +48,7 @@ const FoodList = (props) => {
   const [salads, setSalad] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true)
     const fetchSalad = async () => {
       const response = await fetch('https://react-http-abd62-default-rtdb.firebaseio.com/salad.json');
 
@@ -83,7 +84,14 @@ const FoodList = (props) => {
       }
 
       // console.log(loadedSalad)
-      setSalad(loadedSalad)
+      const filteredArr = loadedSalad.filter((salad) => salad.name.trim().includes(inputValue))
+      // console.log('filteredArr : ', filteredArr)
+
+      if (inputValue.trim().length === 0 || inputValue.trim().length === ''){
+        setSalad(loadedSalad)
+      }else{
+        setSalad(filteredArr)
+      }
       setIsLoading(false);
     };
 
@@ -92,7 +100,7 @@ const FoodList = (props) => {
       setHttpError(error.message)
     });
 
-  }, []);
+  }, [inputValue]);
 
 
   const cartCtx = useContext(CartContext);

@@ -60,6 +60,8 @@ function App() {
     console.log('clearItem 실행 후 : ' + cartCtx.totalAmount)
   }
 
+
+
   return (
     <CartProvider>
       <div className={classes.common}>
