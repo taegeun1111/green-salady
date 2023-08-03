@@ -22,6 +22,8 @@ const FoodListForm = ({id, onAddToCart, name, price, img}) => {
             price: price
         }
         onAddToCart(addCartResult);
+        alert('장바구니에 상품이 담겼습니다!')
+        amountInputRef.current.textContent = 1;
     }
 
     return (

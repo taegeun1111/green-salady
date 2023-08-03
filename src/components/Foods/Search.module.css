@@ -17,5 +17,6 @@
     position: absolute;
     width: 7%;
     left: 7%;
-    top: 55%;
+    top: 50%;
+    transform: translateY(-20%);
 }

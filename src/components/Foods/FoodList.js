@@ -80,7 +80,6 @@ const FoodList = ({inputValue}) => {
           console.log('Error getting image URL:', error);
         }
         imgNum++;
-        // console.log(`imgNum : ${imgNum}`)
       }
 
       // console.log(loadedSalad)
