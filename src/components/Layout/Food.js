@@ -8,7 +8,7 @@ const Food = () => {
   const [inputVal, setInputVal] = useState('');
 
   const inputHandler = (value) =>{
-    console.log('inputHandler의 value : ' + value)
+    // console.log('inputHandler의 value : ' + value)
     setInputVal(value)
   }
 

@@ -61,7 +61,7 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === 'CLEAR') {
-    console.log("Clear 발생")
+    // console.log("Clear 발생")
     return defaultCartState;
   }
 
@@ -81,7 +81,7 @@ const CartProvider = (props) => {
   };
 
   const clearCartList = () => {
-    console.log("Clear 발생")
+    // console.log("Clear 발생")
     dispatch({type: 'CLEAR'})
   }
 

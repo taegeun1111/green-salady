@@ -4,32 +4,7 @@ import FoodListForm from "./FoodListForm";
 import CartContext from "../store/cart-context";
 import {initializeApp} from "firebase/app";
 import {getStorage, getDownloadURL, ref} from 'firebase/storage';
-import {BarLoader, ClipLoader, RingLoader} from "react-spinners";
-
-/*
-          for (let i = 1; i <= Object.keys(responseData).length; i++) {
-            const imageRef = ref(storage, `salad${i}.png`);
-            getDownloadURL(imageRef).then((url) => {
-              console.log('Image URL:', url);
-              loadedSalad.push({url: url})
-            }).catch((error) => {
-              console.log('Error getting image URL:', error);
-            });
-          }
-          console.log(`After input Img loadedSalad : `, loadedSalad)
-
-          for (const key in responseData) {
-
-            loadedSalad.push({
-              id: key,
-              name: responseData[key].name,
-              price: responseData[key].price,
-            });
-          }
-          console.log(`After input text loadedSalad : `, loadedSalad)
-          setSalad(loadedSalad);
-
-     */
+import {BarLoader} from "react-spinners";
 
 const FoodList = ({inputValue}) => {
   const [isLoading, setIsLoading] = useState(true);

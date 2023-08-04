@@ -51,15 +51,14 @@ function App() {
     })
 
     cartCtx.clearCart();
-    console.log('되라')
+    // console.log('되라')
 
   }
 
   const hideReceiptHandler = () => {
     setReceiptIsShown(false);
-    console.log('clearItem 실행 후 : ' + cartCtx.totalAmount)
+    // console.log('clearItem 실행 후 : ' + cartCtx.totalAmount)
   }
-
 
 
   return (
