@@ -1,0 +1,72 @@
+.ordered_wrapper{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.ordered_main_title{
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0 0 0.3em
+}
+
+.ordered_list{
+    padding-bottom: 1em;
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid rgb(100,100,100);
+}
+
+/*공통 주문 이름 영역*/
+.ordered_name,
+.ordered_amount{
+    font-size: 1.3rem;
+}
+.ordered_name{
+    margin-right: 0.5em;
+}
+
+.ordered_amount{
+
+}
+
+.ordered_price_wrapper{
+    display: flex;
+    align-items: baseline;
+    margin-top: 1em;
+}
+
+
+.ordered_sub_title,
+.ordered_price{
+    margin: 0;
+    padding: 0;
+}
+
+.ordered_sub_title{
+    margin-right: 0.3em;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.ordered_price{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+
+.close_btn{
+    position: absolute;
+    width: 5%;
+    right:3%;
+    top: 7%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.close_btn_img{
+    width: 100%;
+    height: 100%;
+}

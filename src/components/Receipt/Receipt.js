@@ -1,12 +1,13 @@
 import React, {useContext, useEffect} from 'react';
 import Modal from "../UI/Modal";
 import CartContext from "../store/cart-context";
-
+import classes from "./Receipt.module.css";
+import close from "../../assets/close.png"
 const Receipt = (props) => {
 
   const cartCtx = useContext(CartContext);
 
-  const clearHandler =()=>{
+  const clearHandler = () => {
     cartCtx.clearCart()
     props.onClose();
   }
@@ -15,27 +16,26 @@ const Receipt = (props) => {
   }, [])
   return (
     <Modal onClose={props.onClose}>
-      <div>Receipt</div>
-      <h1>주문이 완료되었습니다.</h1>
-      <ul>
+      <h1 className={classes.ordered_main_title}>주문이 완료되었습니다.</h1>
+      <ul className={classes.ordered_wrapper}>
         {cartCtx.items.map(item => (
-          <>
-            <li>
-              <section>
-                <div>{item.name}</div>
-                <div>{item.amount}</div>
-              </section>
-            </li>
-          </>
+          <li className={classes.ordered_list} key={item.id}>
+            <div className={classes.ordered_name}>{item.name}</div>
+            <div className={classes.ordered_amount}>{item.amount}개</div>
+          </li>
         ))}
       </ul>
-      <div>
-        <h2>Total </h2>
-        <h2>{cartCtx.totalAmount}원</h2>
+      <div className={classes.ordered_price_wrapper}>
+        <h2 className={classes.ordered_sub_title}>Total </h2>
+        <h2 className={classes.ordered_price}>{cartCtx.totalAmount}원</h2>
       </div>
-      <div>
-        <button type={'button'} onClick={clearHandler}>Close</button>
-      </div>
+
+      <button
+        type={'button'}
+        onClick={clearHandler}
+        className={classes.close_btn}
+      ><img src={close} alt={'close-btn'} className={classes.close_btn_img}/>
+      </button>
     </Modal>
   );
 };
