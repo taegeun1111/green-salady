@@ -13,23 +13,28 @@
 }
 
 .ordered_list{
-    padding-bottom: 1em;
+    padding-bottom: 0.3em;
     display: flex;
     align-items: baseline;
+}
+
+.ordered_list:last-child{
+    padding-bottom: 1em;
     border-bottom: 1px solid rgb(100,100,100);
 }
 
 /*공통 주문 이름 영역*/
 .ordered_name,
+.ordered_count,
 .ordered_amount{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .ordered_name{
     margin-right: 0.5em;
 }
 
-.ordered_amount{
-
+.ordered_count{
+    margin-right: 0.2em;
 }
 
 .ordered_price_wrapper{

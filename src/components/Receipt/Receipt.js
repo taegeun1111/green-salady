@@ -18,8 +18,9 @@ const Receipt = (props) => {
     <Modal onClose={props.onClose}>
       <h1 className={classes.ordered_main_title}>주문이 완료되었습니다.</h1>
       <ul className={classes.ordered_wrapper}>
-        {cartCtx.items.map(item => (
+        {cartCtx.items.map((item,index) => (
           <li className={classes.ordered_list} key={item.id}>
+            <div className={classes.ordered_count}>{index+1}.</div>
             <div className={classes.ordered_name}>{item.name}</div>
             <div className={classes.ordered_amount}>{item.amount}개</div>
           </li>
