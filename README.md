@@ -1,3 +1,8 @@
+## 🚀 배포 링크
+
+배포링크: [Green Salady](https://green-salady.vercel.app/)
+
+
 - **1. 상품 주문**
     - Firebase를 통해 RealtimeDatabase로 상품명과 가격을 받아오고 storage를 통해 이미지 url을  받아온 후 상품 리스트를 출력합니다
     - 목록 출력 동안 loading Bar를 출력합니다.
